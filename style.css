@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgb(116, 3, 3),
+    rgb(197, 5, 5),
+    rgb(116, 3, 3)
+  );
+}
+.hero {
+  margin-top: 5vh;
+  margin-inline: auto;
+  width: 80vw;
+  height: 90vh;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.search-bar {
+  padding-top: 2vh;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20vh;
+}
+.search-inp {
+  height: 100%;
+  width: 70%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(232, 105, 105);
+  padding-inline: 1vw;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+.search-inp::placeholder {
+  color: white;
+}
+.search-inp:focus {
+  border: none;
+  background-color: antiquewhite;
+}
+.search-inp:focus::placeholder {
+  color: rgb(245, 87, 87);
+}
+.search-btn {
+  height: 5vh;
+  width: 20%;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  background: linear-gradient(
+    to right bottom,
+    rgb(245, 24, 24),
+    rgb(195, 1, 1)
+  );
+  transition: all 0.3s;
+}
+.search-btn:hover {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    to right bottom,
+    rgb(248, 11, 11),
+    rgb(130, 3, 3)
+  );
+  box-shadow: 1px 1px 1px 1px rgb(25, 25, 25);
+}
+.search-btn:active {
+  background: linear-gradient(
+    to right,
+    rgb(148, 12, 12),
+    rgb(244, 5, 5),
+    rgb(148, 12, 12)
+  );
+  box-shadow: none;
+}
+.display {
+  color: white;
+}
+.drink-container {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-block: 3vh;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+.drink-container h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: bisque;
+}
+.drink-container img {
+  width: 20vw;
+  height: 40vh;
+  border-radius: 10px;
+}
+.details {
+  display: flex;
+  gap: 5vw;
+  margin-block: 5vw;
+}
+.ing-info,
+.instruct-info {
+  width: 25vw;
+  text-align: left;
+  margin-inline: 1vw;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.ing-info h3,
+.instruct-info h3 {
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-bottom: 4vh;
+}
+.ing-info ul {
+  list-style: circle;
+  gap: 1vh;
+}
+@media only screen and (max-width: 1000px) {
+  .drink-container {
+    font-size: 2vw;
+  }
+  .details {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .details img {
+    width: 50vw;
+    height: 50vh;
+  }
+  .instruct-info,
+  .ing-info {
+    width: 90%;
+  }
+  .instruct-info,
+  .ing-info {
+    text-align: center;
+  }
+  .ing-info ul {
+    list-style: none;
+  }
+}
